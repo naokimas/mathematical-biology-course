@@ -22,7 +22,7 @@ So this repository is incomplete for now. My goal is to share everything eventua
 | 3 | Higher-dimensional ODE models, phase plane, linear stability analysis, and numerical solutions | not yet |
 | 4 | Epidemic dynamics | not yet |
 | 5 | Oscillation and synchronization | not yet |
-| 6 | Data-driven discovery of dynamical systems | not yet |
+| 6 | Data-driven discovery of dynamical systems | [lecture notes](lecture-notes/) |
 | 7 | Chemical kinetics | not yet |
 | 8 | AI for mathematical biology | [lecture notes](lecture-notes/) |
 | 9 | Network biology and network medicine | not yet |
@@ -31,13 +31,13 @@ So this repository is incomplete for now. My goal is to share everything eventua
 
 | Homework | Covers sections | Shared |
 |---|---|---|
-| HW1 | 2 | [yes](homework/) |
-| HW2 | 3 | [yes](homework/) |
-| HW3 | 4 and 5 | [yes](homework/) |
+| HW1 | 2 | not yet |
+| HW2 | 3 | not yet |
+| HW3 | 4 and 5 | not yet |
 | HW4 | 6 and 7 | [yes](homework/) |
 | HW5 | 9, 10, and 11 | [yes](homework/) |
 
-Several sections, and HW1–HW3, draw on S. H. Strogatz, *Nonlinear Dynamics and Chaos*, 2nd edition (CRC Press, 2015). I will also post the syllabus later.
+Several sections, and HW1–HW3, draw on S. H. Strogatz, *Nonlinear Dynamics and Chaos*, 2nd edition (CRC Press, 2015). HW1–HW3 are not released for now. I will also post the syllabus later.
 
 ## Designed for the AI era
 
@@ -49,7 +49,7 @@ These materials are meant to be used together with AI tools, and that is the poi
 
 ## AI disclosure
 
-I used AI tools, mainly Claude (Anthropic) and ChatGPT (OpenAI, through the University of Michigan's service), to prepare these materials. The homework sets were generated with AI from my lecture notes and, for HW1–HW3, Strogatz's textbook; several problems adapt textbook exercises and cite their exercise numbers. I checked, corrected, and revised everything, and I take full responsibility for the content. If you find an error, please open an issue.
+I used AI tools, mainly Claude (Anthropic) and ChatGPT (OpenAI, through the University of Michigan's service), to prepare these materials. The homework sets were generated with AI from my lecture notes. I checked, corrected, and revised everything, and I take full responsibility for the content. If you find an error, please open an issue.
 
 ## About the format of the lecture notes
 
@@ -58,18 +58,22 @@ The lecture notes are not formatted like a textbook. They use a large font and t
 ## Repository layout
 
 ```
-lecture-notes/     lecture notes (.tex and .pdf)
-homework/          homework sets with solutions (.tex and .pdf)
-homework/figures/  figures used in the homework, with the Python scripts that generate them
+lecture-notes/                    lecture notes (.tex and .pdf)
+lecture-notes/figures/<section>/  figures used in each section of the notes
+homework/                         homework sets with solutions (.tex and .pdf)
+homework/figures/homework/        figures used in the homework, with the Python scripts that generate them
 ```
+
+Figures taken from published papers are used under their Creative Commons licenses (CC BY 4.0 or CC BY 3.0), and each caption names the source, links its DOI, and states its license.
 
 To rebuild a PDF, run `pdflatex` on the `.tex` file from within its folder.
 
 ## License
 
-Text and figures: [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/). You may share and adapt them for any purpose, provided you give appropriate credit.
+Text and my own figures: [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/). You may share and adapt them for any purpose, provided you give appropriate credit. Figures from published papers remain under the license stated in their captions.
+
 Code (the Python scripts): [MIT License](https://opensource.org/license/mit).
 
 ## Contact
 
-Naoki Masuda, Department of Mathematics, University of Michigan.
+[Naoki Masuda](https://naokimas.github.io/naokimasuda.github.io/)
