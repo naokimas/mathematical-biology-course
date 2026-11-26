@@ -1,0 +1,304 @@
+%\pdfoutput=1
+% \documentclass[12pt,a4paper,superscriptaddress,preprint,longbibliography]{revtex4-1}
+\documentclass[20pt]{extarticle}
+% http://www-math.mit.edu/~psh/amshelp/2.3/template.tex
+\usepackage[dvips]{graphicx}
+
+\usepackage{mathtools}
+
+\usepackage{geometry}
+	\geometry{
+	left=3mm,
+	right=3mm,
+	top=3mm,
+	bottom=9mm,
+	includefoot,
+	footskip=5mm
+	}
+
+\usepackage{amssymb,amsmath}
+
+\renewcommand{\labelitemii}{$\blacktriangleright$}
+
+\usepackage{bm}
+\usepackage{color}
+
+\usepackage{esvect}
+
+\usepackage{supertabular}
+\usepackage{multirow}
+\usepackage{bigstrut}
+
+\usepackage{ulem}
+\newcommand{\del}[1]{\textcolor{red}{\sout{#1}}}
+\newcommand{\ms}[1]{\textcolor{orange}{\bf [Michiko: #1]}}
+\newcommand{\add}[1]{\textcolor{blue}{#1}}
+\newcommand{\addd}[1]{\textcolor{orange}{#1}}
+\newcommand{\naoki}[1]{\textcolor{green}{\bf [Naoki: #1]}}
+\newcommand{\tw}[1]{\textcolor{cyan}{\bf [Takamitsu: #1]}}
+
+\usepackage[hidelinks]{hyperref}
+\newcommand{\hrefc}[2]{\href{#1}{\textcolor{blue}{#2}}}
+
+\newcommand{\topdir}{../../..}
+
+% Page number: bottom right, small font, on every page (incl. title page).
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\fancyfoot[R]{\footnotesize\thepage}
+\fancypagestyle{plain}{%
+	\fancyhf{}%
+	\renewcommand{\headrulewidth}{0pt}%
+	\renewcommand{\footrulewidth}{0pt}%
+	\fancyfoot[R]{\footnotesize\thepage}%
+}
+
+\sloppy
+
+\begin{document}
+
+\title{MATH 463 Mathematical Biology\\ lecture notes\\
+8. AI for mathematical biology}
+\date{\today}
+\author{Naoki Masuda}
+
+\maketitle
+
+\subsection*{Introduction}
+
+\begin{itemize}
+%
+\item First of all, I do not feel comfortable talking about AI.
+	\begin{itemize}
+	\item My AI talk last month.
+	\item Talking about all these is ethical?
+	\item Students may feel it is waste of their time and tuition? I should teach just math bio, not AI?
+	\item So, I am taking a risk. You can leave whenever you feel uncomfortable.
+	\end{itemize}
+\item \textbf{Do group discussion on:}
+	\begin{itemize}
+	\item Do you use AI for academics?
+	\item If so,
+		\begin{itemize}
+		\item What AI tools do you use?
+		\item How do you use them beyond asking something you don't know?
+		\end{itemize}
+	\item If not, are there reasons to avoid using it?
+		\begin{itemize}
+		\item A common motivation to avoid is not to compromise learning.
+		\end{itemize}
+	\item Exposed to AI lectures in any U-M courses? Share your experience.
+	\end{itemize}
+\item Why should you learn about AI in this course?
+	\begin{itemize}	
+	\item It affects your employability (both industry and academia, and probably elsewhere).
+	\item It affects your learning efficiency (both math itself and projects).
+	\end{itemize}
+\end{itemize}
+
+\subsection*{AI facts}
+
+\begin{itemize}	
+\item There are many AI tools.
+\item U-M has \hrefc{https://genai.umich.edu/resources/tools}{its own versions} that are better than their free versions.
+	\begin{itemize}
+	\item You can use it for free.
+	\end{itemize}
+\item My the other department (\hrefc{https://medschool.umich.edu/departments/computational-medicine-bioinformatics}{Gilbert S. Omenn Department of Computational Medicine and Bioinformatics} in Medical School) has regular AI tool lectures for the entire U-M, and we discuss a lot what to do with AI (not about preventing cheating, but positive uses).	
+\item Many strong tools are behind pay walls.
+	\begin{itemize}
+	\item An exception: \hrefc{https://en.wikipedia.org/wiki/Lean_(proof_assistant)}{Lean}. Renowned mathematicians, such as a Fields Medalist, used Lean to solve top pure math problems.
+	\end{itemize}
+\item They say Chat GPT Pro's pure math is already at graduate student level.
+\item I use Claude Code (since April 2026; why?). Coding, accuracy, interpretation of the results, understanding of my instructions, reporting: These things are quickly replacing work of graduate students and postdocs in my group and many others.
+	\begin{itemize}
+	\item It is an \emph{agentic AI} doing tasks on their own. Others: Codex (I've never used).
+	\item My stories.
+	\item I meet each student/postdoc once a week for one hour. However, if they only report what I ask them to do in the weekly meeting, then it is faster and more accurate for me to interact with an agentic AI for one hour per week. 
+	\end{itemize}
+\item Con for you: Probably longer training period.
+\item Pro for you: Faster and tailor-made learning of subject materials.
+\end{itemize}
+
+\subsection*{Required skills in the AI era}
+
+\hrefc{https://prometai.app/blog/10-jobs-ai-wont-replace-future-proof-careers-for-the-ai-era}{10 Jobs AI Won't Replace: Future-Proof Careers for the AI Era (7/3/2026)}\\
+Well, but somebody makes a responsible decision like surgeons and leaders. I think mathematical biology (and various other research fields) are similar.
+
+What are then skills required in the AI era in mathematical biology and adjacent fields, say for PhD students?\\
+$\to$ those who
+\begin{itemize}
+\item have strong base knowledge, such as linear algebra, differential equations, dynamical systems, mathematical biology, network science, biology, physics, etc.
+	\begin{itemize}
+	\item because this is needed for the next two items.
+	\end{itemize}
+\item understand what they say (no matter whether they have done it themselves or using AI),
+\item can say their thoughts/opinions on what the AI returns,
+\item can interact with AI (if needed) iteratively between weekly meetings with the professor, to try various things beyond what I told them,
+\item optionally: have a great idea (that AI does not say),
+\item optionally: know what I do not know (e.g., strong biology or other domain knowledge even before I ask AI, how to better use AI).
+\item can communicate the above with me and others.
+\item have some experiences in coding.
+	\begin{itemize}
+	\item Otherwise, they cannot check the AI coding is correct or at least going to a correct direction.
+	\item Importantly, very skillful coding is not needed (for me).
+	\end{itemize}
+\end{itemize}
+This is a lot, but no change from before AI (instead the AI skill part).
+	\begin{itemize}
+	\item It is hard (but doable) to beat one hour work of an agentic AI with proper prompts (given by a professor, top engineer, company manager, etc.).
+	\item Cost: \$100 a month, so \$1,200 a year. Even if it becomes 5 times than now, it is \$6,000 a year.
+	\end{itemize}
+In sum, including in industry, what I think will be important are:
+\begin{itemize}
+\item deep domain knowledge,
+\item thinking skills,
+\item communication skills,
+\item AI skills (this is easiest to train among these items).
+\item \textbf{Discuss:} What (other) skills do you think will be important?
+\end{itemize}
+	
+\subsection*{What I do in this course}
+
+You cannot acquire all these in one semester or two. But you can start towards these goals now than later.
+
+\noindent Let's distinguish two domains:
+\begin{itemize}
+\item learning math: mostly ODE, and later networks and games
+\item research skills: two projects
+\end{itemize}
+
+\subsection*{Learning math with AI}
+
+\begin{itemize}
+\item This is not specific to MATH 463.
+\item Why do you need to learn math in the AI era? $\to$ because deep domain knowledge
+	\begin{itemize}
+	\item gives you a deep-thinking basis,
+	\item that is necessary to judge if relevant outcomes you observe are correct or not, aiding your decision making, and
+	\item great ideas (in research/industry) often come from a deep basis.
+	\end{itemize}
+\item Modern facts
+	\begin{itemize}
+	\item It remains super-important for you to get feedback to your work. However, it does not make sense for me to grade math HW (I admit saying this may nerve many of you).
+	\item Real understanding can be tested only either in in-person paper exams or oral exams (e.g., MIT report).
+		\begin{itemize}
+		\item This is why we do midterm exams (also in MATH 462 in Winter 2026), changing from previous years.
+		\end{itemize}
+	\end{itemize}
+\item My educational goals on this (in this AI era):
+	\begin{itemize}
+	\item You understand mathematical contents and can use them (so far, ODE dynamical systems mostly),
+	\item Unless you object (I totally respect anybody who objects to AI use though), you learn how to use AI to accelerate math learning.
+	\end{itemize}
+\item What I do:
+	 \begin{itemize}
+	 \item I do teach ODE dynamical systems (so far, and other math topics later) in class. No change from long time ago.
+	 \item Self-pacing, AI-aided HWs. Why?
+	 	\begin{itemize}
+		\item Different students have different base knowledge.
+		\item Solving many problems and getting feedback/solutions until you really understand is important.
+		\end{itemize}
+	\end{itemize}
+\end{itemize}
+	
+\subsection*{Research skill development in the AI era}
+
+My observations of first miniproject assignment in MATH 462 (Mathematical Modeling) in Winter 2026.
+\begin{itemize}
+\item Diverse coding skills among students.
+\item Some students probably used AI and others do not. But no explicit discussion/disclosure; I did not ask that.
+\item Poor report writing for most groups.
+\item The paper was given, because while Google Scholar has been present for a long time, for undergraduate students, looking for a good paper was hard before the AI.
+	\begin{itemize}
+	\item AI typically hallucinates information, reporting non-existing papers. I had hard time in grant writing in Nov 2025, with Chat GPT 4.0 U-M version and
+	the free version of Gemini.
+	\item However, this is rapidly changing. The paid version of Claude seems to be a way better on finding the literature now. 
+	\end{itemize}
+\end{itemize}
+
+Let me show your miniproject assignment.
+
+\begin{enumerate}
+\item Form a team.
+	\begin{itemize}
+	\item Related to group working and communication skills.
+	\item Report your group before 3pm on Monday on the first day of in-class miniproject. This counts as a participation grade point.
+	\end{itemize}
+\item Look for a paper of your interest that satisfies the requirements of the miniproject (see p.1 of the miniproject description).
+	\begin{itemize}
+	\item Google Scholar is a golden tool. Search based.
+	\item Some groups mentioned U-M library tools to aid paper search. Good
+	\item I do not know how \hrefc{https://its.umich.edu/computing/ai}{U-M AI tools} are good at it, but worth trying. Nowadays, at least paid AI tools do not hallucinate. At least till November 2025, at least U-M ChatGPT and Gemini hallucinated a lot (reporting non-existing papers etc.), which nagged me.
+		\begin{itemize}
+		\item ``U-M GPT'' available under \hrefc{https://its.umich.edu/computing/ai}{U-M AI tools} does not only provide GPT. Claude etc. is also there.
+		\item U-M Google Gemini is \hrefc{https://its.umich.edu/computing/ai/notebook-lm-gemini}{here}.
+		\item Comparing across different AI tools may be useful.
+		\item The first bar is whether the recommended papers do exist.
+		\end{itemize}
+	\item \hrefc{https://elicit.com/}{Elicit} has a free version, and I was happy about it. It only searches existing literature, so there is zero hallucination.
+	\item \hrefc{https://paperguide.ai/}{Paperguide} also has a free version, and I was happy about the quality of the results. However, the token limit was reached very quickly (but it was some time ago, so it may be different right now).
+	\item There are other tools, too.
+	\item In any of these, you can just type your questions. You should also give it constraints I impose on the paper you use (see the miniproject problem sheet).
+	\end{itemize}
+\item Do deep-read it. Why?
+	\begin{itemize}
+	\item Deep understanding is what I care, and how you can grow.
+	\item But as undergraduate student, you do not need to understand everything.
+	\end{itemize}
+\item Do computational tasks.
+	\begin{itemize}
+	\item Coding is a practical prerequisite (I said it on the first day and the syllabus).
+	\item I do not teach coding for this reason and also because this is what AI is probably the best at including teaching.
+	\item You should code yourself while AI can code it right away because, if you do not know how to code, then
+		\begin{itemize}
+		\item you cannot check what AI codes, and
+		\item you cannot judge whether the coding done by AI is going into a right direction or not (including it is not overly complicated for the task, etc.).
+		\end{itemize}
+		In short, you need to ``own'' it even if you use AI to generate the code.
+	\item If you know sufficient coding already and want to use AI to aid coding, you can. I do not stop that. What is important is whether it is beneficial for your learning or detrimental. If you use AI, report it.
+	\item Important: If your group does not use AI and different groups use AI, you may feel you are lagged behind and you should use AI to get the miniproject to a higher level. IT IS NOT. I do not know what the good assessment is for the final project, but for the miniproject, I only access what you have assumed, assuming the tool you used (or if your group does not use AI, I grade your miniproject report as such).
+	\item A bit repetitive, but: I promise not to inflate my expectation (evaluation criteria) due to the availability of AI coding. If your group produces what a group of human coders who have (or some of who have) coding skills can do, you will get a good grade as long as it is written fine. However, if all group members have close-to-zero coding, your group would struggle (this is a prerequisite. If so, start preparing!).
+		\begin{itemize}
+		\item I think ``don't use AI'' instruction makes much sense.
+		\item I care about your learning and growth more than detecting AI cheating.
+		\end{itemize}
+	\end{itemize}
+\item Write a report
+	\begin{itemize}
+	\item You probably do not have many chances to write a report to get feedback. See this as an opportunity because it is an important skill (even in the AI era).
+	\item At least 4 pages as a guideline, while a longer one is okay. Let me say 4-8 pages, while a longer one is acceptable (and I am not saying the paper format such as margin or fontsize).
+	\item Spend time on writing. It should be understandable enough to other group members.
+		\begin{itemize}
+		\item Poor writing kills good analysis. A substantial fraction of grade points for this miniproject report comes from writing. See the rubric on Gradescope.
+		\end{itemize}
+	\item Read some papers (not just the one you decided to focus on) to learn general structure of the paper.
+		\begin{itemize}
+		\item This will be more relevant in the final project, for which you will write a longer report.
+		\end{itemize}
+	\item Correct typos using the AI (or human checking).
+	\item Give it a section structure, organized in accordance with the questions on the problem sheet.
+		\begin{itemize}
+		\item It should have an introduction section that introduces the paper including its biological/medical backgrounds and the ODE model, while it does not have to be long.
+		\item A recommended style: Abstract, Introduction, Methods, Results, Discussion, References. But other styles are fine, too.
+		\item In the report, answer the specific questions I am asking. Make it clear where your answer to question X starts and ends. This is trivial, but some people do not do.
+		\end{itemize}
+	\item Spend time to make a good-looking figure. Large label size, high resolution, clear line color/type, etc.
+		\begin{itemize}
+		\item AI helps here a lot.
+		\end{itemize}
+	\item Cite references. You will certainly cite the paper you use. If you find some other relevant papers you may talk about in the introduction or elsewhere, also cite them. Whatever you cite, the citation should be correct (authors' names, volume number, page number, etc.). 
+		\begin{itemize}
+		\item A couple of groups asked how many they should cite. One (the paper you directly used) is enough for the miniproject. You are welcome to cite more, especially in the Introduction section though. In the final project report, you should cite more papers, to enrich the context of your project.
+		\item Google Scholar, EndNote, Mendeley: At least these citation managers are not good at the accuracy, so you need to cross-check it.
+		\item I do not know how good the AI on the accuracy of citation.
+		\item Anyways, I encourage you to manually proofread the reference list in your report.
+		\item Read all the cited papers, and be responsible for that. You should be able to answer why you cited that paper and what is in there if somebody asks.
+		\end{itemize}
+	\end{itemize}	
+\end{enumerate}
+
+\end{document}
