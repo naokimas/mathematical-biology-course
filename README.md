@@ -25,7 +25,7 @@ So this repository is incomplete for now. My goal is to share everything eventua
 | 6 | Data-driven discovery of dynamical systems | [lecture notes](lecture-notes/) |
 | 7 | Chemical kinetics | not yet |
 | 8 | AI for mathematical biology | [lecture notes](lecture-notes/) |
-| 9 | Network biology and network medicine | not yet |
+| 9 | Network biology and network medicine | [lecture notes](lecture-notes/) |
 | 10 | Mathematical ecology | not yet |
 | 11 | Evolutionary game theory | not yet |
 
@@ -59,18 +59,18 @@ The lecture notes are not formatted like a textbook. They use a large font and t
 
 ```
 lecture-notes/                    lecture notes (.tex and .pdf)
-lecture-notes/figures/<section>/  figures used in each section of the notes
+lecture-notes/figures/<section>/  figures used in each section, with the scripts and data for figures I drew
 homework/                         homework sets with solutions (.tex and .pdf)
 homework/figures/homework/        figures used in the homework, with the Python scripts that generate them
 ```
 
-Figures taken from published papers are used under their Creative Commons licenses (CC BY 4.0 or CC BY 3.0), and each caption names the source, links its DOI, and states its license.
+Figures taken from published papers or from Wikimedia Commons are used under their open licenses (CC BY 4.0, CC BY 3.0, CC BY-SA 4.0, or CC0), and each caption names the source, links it, and states its license. Some figures are my own redrawings from publicly available data; their captions cite the data source.
 
 To rebuild a PDF, run `pdflatex` on the `.tex` file from within its folder.
 
 ## License
 
-Text and my own figures: [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/). You may share and adapt them for any purpose, provided you give appropriate credit. Figures from published papers remain under the license stated in their captions.
+Text and my own figures: [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/). You may share and adapt them for any purpose, provided you give appropriate credit. Figures from published papers or Wikimedia Commons remain under the license stated in their captions.
 
 Code (the Python scripts): [MIT License](https://opensource.org/license/mit).
 
