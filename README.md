@@ -27,7 +27,7 @@ So this repository is incomplete for now. My goal is to share everything eventua
 | 8 | AI for mathematical biology | [lecture notes](lecture-notes/) |
 | 9 | Network biology and network medicine | [lecture notes](lecture-notes/) |
 | 10 | Mathematical ecology | not yet |
-| 11 | Evolutionary game theory | not yet |
+| 11 | Evolutionary game theory | [lecture notes](lecture-notes/) |
 
 | Homework | Covers sections | Shared |
 |---|---|---|
@@ -64,7 +64,7 @@ homework/                         homework sets with solutions (.tex and .pdf)
 homework/figures/homework/        figures used in the homework, with the Python scripts that generate them
 ```
 
-Figures taken from published papers or from Wikimedia Commons are used under their open licenses (CC BY 4.0, CC BY 3.0, CC BY-SA 4.0, or CC0), and each caption names the source, links it, and states its license. Some figures are my own redrawings from publicly available data; their captions cite the data source.
+Figures taken from published papers or from Wikimedia Commons are used under their open licenses (CC BY 4.0, CC BY 3.0, CC BY-SA 4.0, or CC0), and each caption names the source, links it, and states its license. Some figures are my own redrawings from publicly available data; their captions cite the data source. Others are my own simulations or drawings inspired by figures in published papers; their captions cite the original figure, and the scripts that generate them are included.
 
 To rebuild a PDF, run `pdflatex` on the `.tex` file from within its folder.
 
