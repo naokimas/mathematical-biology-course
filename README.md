@@ -26,7 +26,7 @@ So this repository is incomplete for now. My goal is to share everything eventua
 | 7 | Chemical kinetics | not yet |
 | 8 | AI for mathematical biology | [lecture notes](lecture-notes/) |
 | 9 | Network biology and network medicine | [lecture notes](lecture-notes/) |
-| 10 | Mathematical ecology | not yet |
+| 10 | Mathematical ecology | [lecture notes](lecture-notes/) |
 | 11 | Evolutionary game theory | [lecture notes](lecture-notes/) |
 
 | Homework | Covers sections | Shared |
